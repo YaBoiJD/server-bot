@@ -1,17 +1,14 @@
 import os, sys
 from .startup import client, start
+from .load_cogs import load_cogs
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv() # get environmental elements from .env
 
-# print(f'{os.getcwd()}')
-
-if not os.getenv('TOKEN'):
+if not os.getenv('TOKEN'): # exit if TOKEN is not found
     print('Could not get token, exiting')
     sys.exit()
 
-for filename in os.listdir(f'{os.getcwd()}/jdbot/cogs'):
-    if filename.endswith('.py'):
-        client.load_extension(f'jdbot.cogs.{filename[:-3]}')
-
+# start loading cogs and start the bot
+load_cogs(client)
 start(os.getenv('TOKEN'))
