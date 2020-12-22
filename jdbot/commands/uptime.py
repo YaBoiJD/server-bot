@@ -7,10 +7,6 @@ class Utils(commands.Cog):
         self.client = client
 
     @commands.command()
-    async def ping(self, ctx):
-        await ctx.send(f'Pong!\nLatency is {self.client.latency}')
-
-    @commands.command()
     async def uptime(self, ctx):
         delta_uptime = datetime.utcnow() - self.client.launch_time
         hours, remainder = divmod(int(delta_uptime.total_seconds()), 3600)
