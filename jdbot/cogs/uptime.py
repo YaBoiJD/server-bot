@@ -1,3 +1,9 @@
+"""
+uptime command
+
+displays bot uptime
+"""
+
 import discord
 from discord.ext import commands
 from datetime import datetime

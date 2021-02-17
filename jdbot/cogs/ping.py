@@ -1,3 +1,9 @@
+"""
+ping command
+
+returns bot latency
+"""
+
 import discord
 from discord.ext import commands
 from datetime import datetime
