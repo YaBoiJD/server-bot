@@ -11,12 +11,14 @@ from dotenv import load_dotenv
 load_dotenv() # Get environment vars from .env file if any
 
 # Get Token
-if not (token := os.getenv("TOKEN")):
+token = os.getenv("TOKEN")
+if not (token):
     print("Error:  Token not found.")
     sys.exit() # quit if token is not found
 
 # Get Prefix
-if not (prefix := os.getenv('PREFIX')):
+prefix = os.getenv("PREFIX")
+if not (prefix):
     prefix = "!" # set prefix to ! if not found
 
 # Setup bot
