@@ -1,1 +1,1 @@
-worker: python3 -m jdbot
+worker: python3 -m eclipsebot
