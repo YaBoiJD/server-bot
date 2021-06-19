@@ -3,7 +3,7 @@ Bot initialization
 """
 import os
 import sys
-from jdbot import cogs
+from eclipsebot import cogs
 from discord import Intents
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -27,7 +27,7 @@ client = commands.Bot(command_prefix=prefix)
 # Load Cogs
 for cog in cogs.cogs:
     try:
-        client.load_extension(f"jdbot.cogs.{cog}")
+        client.load_extension(f"eclipsebot.cogs.{cog}")
     except Exception as e:
         print(f"Failed to load cog: {cog}")
         print(f"Error:  {e}")
